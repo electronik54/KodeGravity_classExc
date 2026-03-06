@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="737e9722-cf91-45a3-9ee5-2d8be6632975" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/feb21/Loop.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="39apxJbMbxXqwWlqLRMo4CtrAwx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Decisions.executor": "Run",
+    "Application.Ivr.executor": "Run",
+    "Application.Loop.executor": "Run",
+    "Application.Loops.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Operators.executor": "Run",
+    "Application.exce.executor": "Run",
+    "Application.feb21.Main.executor": "Run",
+    "Application.feb28.Main.executor": "Run",
+    "Application.mar03.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/code/KodeGravity/CODE/classExc",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "F:/code/KodeGravity/CODE/classExc/src/Main.java",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Markdown"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\code\KodeGravity\CODE\classExc\src\feb26" />
+      <recent name="F:\code\KodeGravity\CODE\classExc\src\mar03" />
+      <recent name="F:\code\KodeGravity\CODE\classExc\src\feb24" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="feb14" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.feb21.Main">
+    <configuration name="Ivr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="feb14.Ivr" />
+      <module name="classExc" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Loops" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="feb17.Loops" />
+      <module name="classExc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="feb17.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="feb24.Main" />
+      <module name="classExc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="feb24.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="feb21.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="feb21.Main" />
+      <module name="classExc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="feb21.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="feb28.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="feb28.Main" />
+      <module name="classExc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="feb28.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.feb21.Main" />
+        <item itemvalue="Application.feb28.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Loops" />
+        <item itemvalue="Application.Ivr" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="737e9722-cf91-45a3-9ee5-2d8be6632975" name="Changes" comment="" />
+      <created>1770944280654</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1770944280654</updated>
+      <workItem from="1770944284703" duration="55000" />
+      <workItem from="1771083169880" duration="8688000" />
+      <workItem from="1771104123182" duration="7898000" />
+      <workItem from="1771198825071" duration="1117000" />
+      <workItem from="1771378681143" duration="6700000" />
+      <workItem from="1771445789232" duration="406000" />
+      <workItem from="1771449255391" duration="979000" />
+      <workItem from="1771450580295" duration="257000" />
+      <workItem from="1771466051274" duration="12000" />
+      <workItem from="1771472947433" duration="42000" />
+      <workItem from="1771686004527" duration="10606000" />
+      <workItem from="1771697050979" duration="675000" />
+      <workItem from="1771698543497" duration="5923000" />
+      <workItem from="1771894746815" duration="826000" />
+      <workItem from="1771952246754" duration="533000" />
+      <workItem from="1771981483849" duration="4815000" />
+      <workItem from="1772151306365" duration="185000" />
+      <workItem from="1772151506538" duration="1910000" />
+      <workItem from="1772156053506" duration="870000" />
+      <workItem from="1772286928064" duration="23200000" />
+      <workItem from="1772335671672" duration="3561000" />
+      <workItem from="1772426208428" duration="20000" />
+      <workItem from="1772426564818" duration="2000" />
+      <workItem from="1772426856433" duration="12000" />
+      <workItem from="1772595609020" duration="193000" />
+      <workItem from="1772596095736" duration="22000" />
+      <workItem from="1772596143739" duration="7000" />
+      <workItem from="1772596165307" duration="3000" />
+      <workItem from="1772596255442" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/feb24/DateDemo.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/feb24/DateDemo.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/feb24/DateDemo.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/feb24/DateDemo.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -34,7 +34,7 @@
       + `:q!`:Quit without saving
 
 ## PERMISSIONS 
-[^1]: Type `ls -l` and you will see `-rw-r--r-- 1 ec2-user ec2-user  120 Mar 5 <fileName.ext>`
+Type `ls -l` and you will see `-rw-r--r-- 1 ec2-user ec2-user  120 Mar 5 <fileName.ext>`[^1]:
 > - `-rw-r--r--` → permissions
 > - `ec2-user` → owner
 > - `ec2-user` → group
