@@ -33,8 +33,8 @@
       + `:wq`
       + `:q!`:Quit without saving
 
-## PERMISSIONS
-Type `ls -l` and you will see `-rw-r--r-- 1 ec2-user ec2-user  120 Mar 5 <fileName.ext>`
+## PERMISSIONS 
+[^1]: Type `ls -l` and you will see `-rw-r--r-- 1 ec2-user ec2-user  120 Mar 5 <fileName.ext>`
 > - `-rw-r--r--` → permissions
 > - `ec2-user` → owner
 > - `ec2-user` → group
@@ -53,14 +53,16 @@ A shebang line at the top of the file so Linux knows to use Bash. This is the fi
 Shell scripts only run directly when they have the proper execution permissions.
 
 example script to print "Hello from my EC2 instance!"
-> `#!/bin/bash`\
-> `echo "Hello from my EC2 instance!"`
+```
+#!/bin/bash`\
+echo "Hello from my EC2 instance!"
+```
 
 example script to print "Hello from my EC2 instance!"
 > `#!/bin/bash`\
 > `echo "Hello from my EC2 instance!"`
 
 RUN THE SCRIPT
-Type `./<fileName.sh>` in console *(needs execute permission)*\
+Type `./<fileName.sh>` in console *(needs `execute` permission)*[^1]\
 **OR**
-`bash script.sh` *(DOES NOT needs execute permission)*
+`bash script.sh` *(DOES NOT needs `execute` permission)*
