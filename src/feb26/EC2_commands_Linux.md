@@ -34,7 +34,7 @@
       + `:q!`:Quit without saving
 
 ## PERMISSIONS 
-Type `ls -l` and you will see `-rw-r--r-- 1 ec2-user ec2-user  120 Mar 5 <fileName.ext>`[^1]:
+Type[^1] `ls -l` and you will see `-rw-r--r-- 1 ec2-user ec2-user  120 Mar 5 <fileName.ext>`.
 > - `-rw-r--r--` → permissions
 > - `ec2-user` → owner
 > - `ec2-user` → group
@@ -45,6 +45,8 @@ Type `ls -l` and you will see `-rw-r--r-- 1 ec2-user ec2-user  120 Mar 5 <fileNa
 >`└────────── owner`
 
 `chmod`		- to change permission *EXAMPLE*: `chmod 644 <fileName.ext>`
+
+[^1]: My reference.
 
 ## BASH SCRIPT
 A shebang line at the top of the file so Linux knows to use Bash. This is the first line of the script and looks like `#!/bin/bash`
@@ -63,6 +65,6 @@ example script to print "Hello from my EC2 instance!"
 > `echo "Hello from my EC2 instance!"`
 
 RUN THE SCRIPT
-Type `./<fileName.sh>` in console *(needs `execute` permission)*[^1]\
+Type `./<fileName.sh>` in console[^per] *(needs `execute` permission)* \
 **OR**
 `bash script.sh` *(DOES NOT needs `execute` permission)*
