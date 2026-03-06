@@ -29,9 +29,9 @@
     ##### *(3.1)Saving and quitting*
     + `Esc` : Now you’re back in Normal mode.
       + `:w` : Save 
-      + `:q` : Quit Vim
-      + `:wq`
-      + `:q!`:Quit without saving
+      + `:q` : Quit
+      + `:wq` : Save + Quit
+      + `:q!` : Quit without saving
 
 ## PERMISSIONS
 Type `ls -l` and you will see `-rw-r--r-- 1 ec2-user ec2-user  120 Mar 5 <fileName.ext>`.
@@ -43,7 +43,7 @@ Type `ls -l` and you will see `-rw-r--r-- 1 ec2-user ec2-user  120 Mar 5 <fileNa
 >`|...|...└── others`\
 >`|...└────── group`\
 >`└────────── owner`
-
+> ![permission table representation](permissionTable.png)
 `chmod`		- to change permission *EXAMPLE*: `chmod 644 <fileName.ext>`
 
 ## BASH SCRIPT
@@ -65,4 +65,4 @@ example script to print "Hello from my EC2 instance!"
 RUN THE SCRIPT
 Type `./<fileName.sh>` in console[^per] *(needs `execute` permission)*[link](#PERMISSIONS) \
 **OR**
-`bash script.sh` *(DOES NOT needs `execute` permission)*[link](#PERMISSIONS)
+`bash script.sh` *(DOES NOT needs `execute` permission)* [link](#PERMISSIONS)
