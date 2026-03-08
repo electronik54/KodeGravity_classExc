@@ -105,12 +105,15 @@ public class Main {
                 System.out.println(customer.getOrderDetails());
                 System.out.println("-xxxx-------------------");
 
-
+                System.out.println();
+                System.out.print("Press 1 to enter next customer detail or 0 to END:");
             } while (s.nextInt() == 1);
 
+            System.out.print("RESTART ORDERING SYSTEM? 1 for YES, 0 TO EXIT:");
         }
 
 
+        System.out.println();
         System.out.println("-INHERITANCE- (inclass exc)");
         System.out.print("enter 1 to CONTINUE:");
         while (s.nextInt() == 1) {
