@@ -56,7 +56,7 @@ public class Main {
             for (User u : userArr) {
                 if (u.login(loginEmail, loginPass)) {
                     loginUser = u;
-                    break;
+                    break; // TO EXIT OUT OF for loop when the user is found
                 }
             }
 
@@ -175,7 +175,7 @@ public class Main {
             } else {
                 System.out.println("INCORRECT CREDENTIALS");
             }
-            s.nextInt();
+            System.out.println();
 
             //ASK USER FOR A RETRY
             System.out.print("TRY AGAIN? (0)>YES | (1)>NO :");

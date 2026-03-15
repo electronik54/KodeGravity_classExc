@@ -27,6 +27,7 @@ bin/
 .vscode/
 
 ###IntelliJ IDEA###
+.idea/
 /idea
 
 ### Mac OS ###

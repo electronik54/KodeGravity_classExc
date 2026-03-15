@@ -28,19 +28,19 @@ public class User {
     }
 
     boolean login(String email){
-        if(this.email.equals(email)){
+        if(this.email.equalsIgnoreCase(email)){
             return true;
         }
         return false;
     }
     boolean login(String email, String password){
-        if(this.email.equals(email) && this.password.equals(password)){
+        if(this.email.equalsIgnoreCase(email) && this.password.equals(password)){
             return true;
         }
         return false;
     }
     boolean login(String email, String password, String username){
-        if(this.email.equals(email) && this.password.equals(password) && this.username.equals(username)){
+        if(this.email.equalsIgnoreCase(email) && this.password.equals(password) && this.username.equalsIgnoreCase(username)){
             return true;
         }
         return false;
