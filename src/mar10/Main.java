@@ -1,8 +1,7 @@
 package mar10;
 import java.util.Scanner;
 
-
-// ENCAPSULATION
+// ENCAPSULATION, GETTER SETTER, super KEYWORD
 public class Main {
     public static void main(String[] args) {
 
@@ -39,7 +38,7 @@ public class Main {
         var acc2 = new Account(user2, 2350.99, "CURRENT");
         var acc3 = new Account(user3, 1013.00, "SAVING");
         Account[] accArray = new Account[]{acc1, acc2, acc3};
-        var bank = new Scotia( accArray);
+        var bank = new Scotia(accArray);
 
         var user4 = new User("Manya", "123456");
         var user5 = new User("Amarjot", "123456");
@@ -149,7 +148,7 @@ public class Main {
             System.out.println();
             System.out.print("PRESS \n (1) TO SELECT THE BANK \n (O) TO EXIT THE BANK APP:");
         } while (s.nextInt() == 1);
-        
+
         System.out.println();
         System.out.println("--GOOD BYE!--");
     }

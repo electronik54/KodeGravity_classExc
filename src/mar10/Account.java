@@ -30,6 +30,9 @@ public class Account {
         return Utils.roundNumber(balance, 2);
     }
 
+    // not used as withdraw and deposit is getting complex as parameter amount as to be +for deposit and -for withdraw
+    private void setBalance(double amount) {}
+
     public boolean withdraw(double amount) {
         if(this.balance <= amount) {
             System.out.println("Insufficient balance to proceed with this transaction");
