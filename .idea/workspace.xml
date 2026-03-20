@@ -2,12 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1dd3b0f-0991-4a39-8a68-8a3aba0d3601" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/MediaPlayer/IntMusic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/MediaPlayer/IntPlayMovie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/MediaPlayer/IntPlayOnlineMusic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/MediaPlayer/MediaPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/MediaPlayer/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/MediaPlayer/Spotify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/MediaPlayer/UniversalPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/MediaPlayer/Winamp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/Questions.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/SocialMedia/Facebook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/SocialMedia/IntAds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/SocialMedia/IntChat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/SocialMedia/IntPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/SocialMedia/IntStory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/SocialMedia/LinkedIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/SocialMedia/Media.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/SocialMedia/Reel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/SocialMedia/Whatsapp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar17/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/production/classExc/mar14/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/classExc/mar14/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/classExc/mar14/Notification/SMS.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/classExc/mar14/Notification/SMS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/classExc/mar14/Question.md" beforeDir="false" afterPath="$PROJECT_DIR$/production/classExc/mar14/Question.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/production/classExc/mar14/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/classExc/mar14/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mar12/commands.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/mar12/commands.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mar14/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mar14/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mar14/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mar14/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mar14/Question.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/mar14/Question.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -36,34 +58,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.mar03.Main.executor": "Run",
-    "Application.mar10.Main.executor": "Run",
-    "Application.mar14.Main.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.mar03.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.mar10.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.mar14.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.mar17.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="mar14.Notification" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="mar17" />
       <recent name="mar14" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mar07.Main" />
       <module name="classExc" />
@@ -148,8 +172,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/mar14/Main.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="11" />
+          <line>60</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

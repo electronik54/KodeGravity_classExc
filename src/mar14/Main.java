@@ -7,8 +7,9 @@ import mar14.Notification.SMS;
 
 import java.util.Scanner;
 
-// OBJECT CLASS and its METHODS, GARBAGE COLLECTOR(interview imp), METHOD OVERLOADING (in the same class with same method name but different signatures), METHOD OVERRIDING(in the inherited class with same method name), ABSTRACTION (abstract class, interface[NOT COVERED])
+// OBJECT CLASS and its METHODS, GARBAGE COLLECTOR(interview imp), POLYMORPHISM(METHOD OVERLOADING, METHOD OVERRIDING) > METHOD OVERLOADING (in the same class with same method name but different signatures), METHOD OVERRIDING(in the inherited class with same method name), ABSTRACTION (abstract class, interface[NOT COVERED])
 public class Main {
+
     /*HOMEWORK:
     (1)
     - IN THE PDF THERE IS AN ARTICLE(and 2 videos in article) ON GARBAGE COLLECTOR, WATCH IT
@@ -34,7 +35,9 @@ public class Main {
         // FOR KEEPING A RECORD OF ALL USERS
         User[] userArr = new User[]{ftUser, ptUser, conUser};
 
-        System.out.println("-HOMEWORK TO IMPLEMENT ABSTRACT CLASS-");
+        System.out.println();
+        System.out.println("-----------------------");
+        System.out.println("--HOMEWORK TO IMPLEMENT ABSTRACT CLASS--");
         System.out.print("CONTINUE? (0)>YES | (1)>NO :");
         userIn = s.nextInt();
 
@@ -130,7 +133,6 @@ public class Main {
                         System.out.println("-ON "+notiToUser.getUserName()+"'s SIDE...-");
                         System.out.println("TINGGGG!! <YOU HAVE 1 NEW NOTIFICATION>");
                         System.out.println(emailNoti.ReceiveNotification());
-
                         break;
 
                     case 1:
@@ -141,7 +143,7 @@ public class Main {
 
                         Notification smsNoti = new SMS(message, loginUser, notiToUser);
 
-                        System.out.print("SEND EMAIL? (0)>YES | (1)>ALSO YES | (ANY INT VALUE) NO... BUT STILL SEND IT:");
+                        System.out.print("SEND SMS? (0)>YES | (1)>ALSO YES | (ANY INT VALUE) NO... BUT STILL SEND IT:");
                         s.nextInt();
                         System.out.println(smsNoti.sendNotification());
 
@@ -158,7 +160,7 @@ public class Main {
 
                         Notification pushNoti = new Push(message, loginUser, notiToUser);
 
-                        System.out.print("SEND EMAIL? (0)>YES | (1)>ALSO YES | (ANY INT VALUE) NO... BUT STILL SEND IT:");
+                        System.out.print("SEND PUSH? (0)>YES | (1)>ALSO YES | (ANY INT VALUE) NO... BUT STILL SEND IT:");
                         s.nextInt();
                         System.out.println(pushNoti.sendNotification());
 
@@ -183,6 +185,8 @@ public class Main {
         }
 
 
+        System.out.println();
+        System.out.println("-----------------------");
         System.out.println("-INCLASS EXE FOR FINDING AREA OF A SHAPE-");
         System.out.print("CONTINUE? (0)>YES | (1)>NO :");
         userIn = s.nextInt();
@@ -328,6 +332,8 @@ public class Main {
             } while (s.nextInt() == 0);
         }
 
+        System.out.println();
+        System.out.println("-----------------------");
         System.out.println("THAT'S ALL FOLKS!!! BYE");
     }
 
