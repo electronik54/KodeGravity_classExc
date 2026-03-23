@@ -13,7 +13,7 @@ public class Main {
     /*HOMEWORK:
     (1)
     - IN THE PDF THERE IS AN ARTICLE(and 2 videos in article) ON GARBAGE COLLECTOR, WATCH IT
-    - Create a presentation (submit it after a week or 2)
+    - Create a presentation.md (submit it after a week or 2)
 
     (2) OBJECT CLASS: learn about its method
 
