@@ -30,18 +30,18 @@ public class Main {
                 System.out.print("PRESS (4) FOR UNIVERSAL PLAYER:");
                 intUserIn = sc.nextInt();
 
-                if (intUserIn > 0 && intUserIn < 5) {
-                    isError = false;
-                    player = switch (intUserIn) {
-                        case 1 -> new Winamp();
-                        case 2 -> new MediaPlayer();
-                        case 3 -> new Spotify();
-                        case 4 -> new UniversalPlayer();
-                        default -> player;
-                    };
-                } else {
-                    System.out.println("-INVALID CHOICE, CHOOSE THE CORRECT OPTION-");
-                }
+//                if (intUserIn > 0 && intUserIn < 5) {
+//                    isError = false;
+////                    player = switch (intUserIn) {
+////                        case 1 -> new Winamp();
+////                        case 2 -> new MediaPlayer();
+////                        case 3 -> new Spotify();
+////                        case 4 -> new UniversalPlayer();
+////                        default -> player;
+//                    };
+//                } else {
+//                    System.out.println("-INVALID CHOICE, CHOOSE THE CORRECT OPTION-");
+//                }
             }
 
             player.displayButtonConsole();
