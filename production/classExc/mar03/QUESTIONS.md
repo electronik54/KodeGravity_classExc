@@ -1,1 +1,0 @@
-- [ ] what is var in java. why does it work in VSCode and not in Intellij IDEA?
