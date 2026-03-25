@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1dd3b0f-0991-4a39-8a68-8a3aba0d3601" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/GarbageCollectorPresentation/presentation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mar14/GarbageCollectorPresentation/presentation.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mar14/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mar14/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GarbageCollectorPresentation/presentation.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +56,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="mar14" />
       <recent name="mar14.Notification" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
