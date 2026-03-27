@@ -15,7 +15,7 @@ public class Devices {
         //LOCAL INNER CLASS: Defined inside the method
         class SomeClass {
             String getName() {
-                return "-"+name.toUpperCase()+"-";
+                return "-" + name.toUpperCase() + "-";
             }
         }
         SomeClass innerClass = new SomeClass();
@@ -24,20 +24,21 @@ public class Devices {
     }
 
     //STATIC INNER CLASS
-    static class ConnectionToInternet{
+    static class ConnectionToInternet {
 
-        static boolean isConnected=false;
+        static boolean isConnected = false;
 
-        boolean checkConnection(){
+        boolean checkConnection() {
             isConnected = !isConnected;
-            return  isConnected;
+            return isConnected;
         }
     }
 
     //MEMBER INNER CLASS OR INNER CLASS
-    class LocalConnection{
-        boolean isLocalConnected=false;
-        boolean checkConnection(){
+    class LocalConnection {
+        boolean isLocalConnected = false;
+
+        boolean checkConnection() {
             isLocalConnected = !isLocalConnected;
             return isLocalConnected;
         }

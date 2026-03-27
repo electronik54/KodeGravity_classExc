@@ -157,10 +157,3 @@ EXAMPLE
 
 
 
-***
-
-### *QUERY for copilot*
-```
-- i have a free GitHub account and i have never collaborated with anyone before. I have some repos on my GitHub but i am the only one who has committed to it and i always use the master/main branch. I know add, commit, push and pull commands but i have no idea how they work when branching is involved, especially when branches are involved. Teach me branching strategies
-- when i run git commit, it only affects the local GIT and not the GitHub right? I am very confused about what does the command affects, weather its local git for the GitHub too and this is why i am confused about the branching as well
-```

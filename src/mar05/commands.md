@@ -24,6 +24,11 @@
 3. At this point, if this is you first time to push the code, the GIT will ask you to login into the Github
 4. `git push -u origin master` this will push your code to the repository, to the master branch by default so next time you just have to type `git push` to push the code to GitHub to its master branch
 
+> resolve conflicts if any, then:
+> git push --force-with-lease
+Use --force-with-lease instead of --force to avoid accidentally overwriting others’ work.
+
+
 ---
 
 # KEYTAKE AWAYS
