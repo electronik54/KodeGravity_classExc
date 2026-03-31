@@ -11,7 +11,6 @@ public class Devices {
     }
 
     String getName() {
-
         //LOCAL INNER CLASS: Defined inside the method
         class SomeClass {
             String getName() {
@@ -19,7 +18,6 @@ public class Devices {
             }
         }
         SomeClass innerClass = new SomeClass();
-
         return innerClass.getName();
     }
 

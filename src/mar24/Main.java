@@ -7,7 +7,7 @@ import java.util.Scanner;
 import static java.lang.Math.sqrt;
 
 /**
- * INNER CLASS > (1) LOCAL INNER CLASS, ANONYMOUS CLASS, PACKAGE[USER DEFINED(dev created), INBUILT(provided by java)], EXCEPTION HANDLING
+ * INNER CLASS > (1) LOCAL INNER CLASS(inside a class), ANONYMOUS CLASS, MEMBER INNER CLASS((inside a method)) | PACKAGE[USER DEFINED(dev created), INBUILT(provided by java)], EXCEPTION HANDLING
  * HOMEWORK; DIY: PROTECTED KEYWORD, WRAPPER CLASSES, TYPE CASTING
  */
 public class Main {
@@ -110,9 +110,9 @@ public class Main {
             double userInDob = sc.nextDouble();
 
             System.out.println("SQUARE ROOT OF (" + userInDob + "): " + sqrt(userInDob));
-            System.out.println("-WE JUST USED sqrt(" + userInDob + ") INSTEAD OF Math.sqrt(" + userInDob + ") HERE. THIS WAS MADE POSSIBLE AS WE USED <import static java.lang.Math.sqrt;>. NOTICE THE KEYWORD <static> IN THE IMPORT STATEMENT-");
+            System.out.println("-WE JUST USED <sqrt(" + userInDob + ")> INSTEAD OF <Math.sqrt(" + userInDob + ")> HERE. THIS WAS MADE POSSIBLE AS WE USED <import static java.lang.Math.sqrt;>. NOTICE THE KEYWORD <static> IN THE IMPORT STATEMENT-");
             System.out.println("-SIMILARLY, YOU CAN IMPORT <import static java.lang.Math.PI;> AND READ THE VALUE OF PI JUST BY USING STATIC MEMBER <PI> INSTEAD OF <Math.PI>-");
-            System.out.println("-ALL STATIC MEMBERS OF <Math> LIBRARY CAN BE IMPORTED BY USING <import static java.lang.Math.*;>-");
+            System.out.println("-ALL 'STATIC' MEMBERS OF <Math> LIBRARY CAN BE IMPORTED BY USING <import static java.lang.Math.*;>-");
             System.out.println("-PROS: \n   STATIC IMPORT IS USED TO FOR CLEANER & LESS REPETITIVE CODE INCASE WE ARE USING A CERTAIN MEMBER OR METHOD FREQUENTLY.-");
             System.out.println("-CONS: \n   INCASE WHERE <import static java.lang.Integer.*;> & <import static java.lang.Long.*;> IS USED. BOTH THE CLASSES CONTAINS A MEMBER CALLED <MAX_VALUE> WHICH WILL CAUSE CONFLICT.-");
 
@@ -195,6 +195,17 @@ public class Main {
             userIn = sc.nextInt();
             System.out.println();
         }
+
+
+        System.out.println();
+        System.out.print("TYPE CASTING? (1)>YES | (0)>NO :");
+        userIn = sc.nextInt();
+        while (userIn == 1){}
+
+        System.out.println();
+        System.out.print("WRAPPER CLASS? (1)>YES | (0)>NO :");
+        userIn = sc.nextInt();
+        while (userIn == 1){}
 
     }
 }
