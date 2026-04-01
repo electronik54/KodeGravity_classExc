@@ -1,8 +1,11 @@
 public class Questions {
 /*
-whats the difference between "" and ''
-    1> i can do char="a" but not char='a' > "" for string and '' for char
-    2>
 
+    1. why use upcasting (List and ArrayList)
+    2. Product[] arrProducts = listProducts.toArray(); wont work. Why?
+
+
+    # When will finally{} NOT execute
+    # ***** Hashmap
  */
 }

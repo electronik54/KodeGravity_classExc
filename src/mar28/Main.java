@@ -170,7 +170,6 @@ public class Main {
                 System.out.println();
             }
 
-
             System.out.print("TRY AGAIN? (1)>YES (0)>NO :");
             userIn = s.nextInt();
             System.out.println();

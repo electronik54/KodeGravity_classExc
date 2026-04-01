@@ -9,5 +9,9 @@ public final class Utils {
     public static double roundNumber(double number, int decimalPlaces) {
         return BigDecimal.valueOf(number).setScale(decimalPlaces, BigDecimal.ROUND_HALF_UP).doubleValue();
     }
+
+    public static String isNullOrEmpty(String string) {
+        return (string == null || string.trim().isEmpty()) ? "" : string;
+    }
 }
 
