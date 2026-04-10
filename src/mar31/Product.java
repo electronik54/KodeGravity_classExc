@@ -31,7 +31,7 @@ public class Product {
         if (name.isEmpty())
             throw new Err("!! PRODUCT NAME CANNOT BE NULL !!");
 
-        this.productName = productName;
+        this.productName = name;
     }
 
     public double getProductPrice() {

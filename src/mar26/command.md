@@ -1,4 +1,5 @@
 ### IN-CLASS
+- merge
 - Git revert, 
 - gitignore, 
 - git reset(not recommended to use)

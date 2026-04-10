@@ -1,8 +1,12 @@
 package mar24;
 
+import mar24.Animal.Animal;
+import mar24.Animal.Cat;
 import mar24.Payments.Bank.Email.Email;
 
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
 import static java.lang.Math.sqrt;
 
@@ -196,16 +200,44 @@ public class Main {
             System.out.println();
         }
 
-
         System.out.println();
         System.out.print("TYPE CASTING? (1)>YES | (0)>NO :");
         userIn = sc.nextInt();
-        while (userIn == 1){}
+        while (userIn == 1){
+            System.out.println("Type casting in Java is the process of converting a value from one data type to another");
+            System.out.println("it applies to primitive types (e.g., int ↔ double) called - Widening (implicit) and Narrowing (explicit). AND reference types (upcasting/downcasting in class hierarchies)");
+            System.out.println("EXAMPLE:");
+
+            int i = 42;
+            double d = i;        // widening, implicit
+            double x = 9.78;
+            int j = (int) x;     // narrowing, explicit -> j == 9, but we loose the accuracy of the data as decimal value is lost
+
+
+            Cat cat = new Cat("Pete");
+            Animal ani = cat; // upcast, implicit
+
+            if (ani instanceof Cat) {
+                Cat c = (Cat) ani; // downcast, explicit
+            }
+        }
 
         System.out.println();
         System.out.print("WRAPPER CLASS? (1)>YES | (0)>NO :");
         userIn = sc.nextInt();
-        while (userIn == 1){}
+        while (userIn == 1){
+            System.out.println("Wrapper classes in Java are object representations of the eight primitive types (for example, Integer for int, Double for double) used whenever an object is required (collections, generics, APIs)");
+            System.out.println("Wrapper classes are object wrappers for Java primitive types: Byte, Short, Integer, Long, Float, Double, Character, Boolean");
+            System.out.println("'AUTOBOXING': automatic conversion from primitive to wrapper (e.g., Integer i = 5;). WHILE 'UNBOXING': automatic conversion from wrapper to primitive (e.g., int x = i;)");
+            System.out.println("EXAMPLE:");
+
+            Integer a = 10; // primitive 10 autoboxed to Integer
+            int b = a; // Integer unboxed to int
+
+            //Using in collections
+            List<Integer> list = new ArrayList<>();
+            list.add(5); // autoboxes int 5 to Integer
+        }
 
     }
 }

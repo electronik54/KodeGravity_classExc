@@ -15,42 +15,44 @@ public class Loops {
         //homework: DO NOT EXIT LOOP till user enters Y
         //DO-WHILE LOOP
         System.out.println("--DO>WHILE LOOP--");
-        System.out.println("-This is 'enter correct answer to exit' loop-");
-        int iterationNum=0;
+//        System.out.println("-This is 'enter correct answer to exit' loop-");
+        int iterationNum = 0;
         int a;
         int b;
         int answer;
         Random rand = new Random();
 
+
         do {
             ++iterationNum;
             a = rand.nextInt(100);
             b = rand.nextInt(100);
-            System.out.print(iterationNum+":Solve > " + a + "+" + b + ":");
+            System.out.print(iterationNum + ":Solve > " + a + "+" + b + ":");
             answer = scan.nextInt();
             if (a + b != answer) {
                 System.out.println("-Incorrect, try again. Continuing loop-");
             }
-        }while(a+b!=answer);
-        System.out.println("-Correct, exiting loop after "+iterationNum+" iteration(s)-");
+        } while (a + b != answer);
+
+        System.out.println("-Correct, exiting loop after " + iterationNum + " iteration(s)-");
         System.out.println("-------------------------");
 
         System.out.println("--WHILE LOOP--");
-        iterationNum=0;
-        char input='n';
+        iterationNum = 0;
+        char input = 'n';
 
         //WHILE LOOP
         System.out.println("-This is press Y to exit loop-");
-        while(input != 'y'){
+        while (input != 'y') {
             System.out.print(++iterationNum + ":Press 'y' to exit:");
             char userChar = scan.next().charAt(0);
-            if(userChar == 'y'){
+            if (userChar == 'y') {
                 input = userChar;
-            }else{
+            } else {
                 System.out.println("-Loop continues-");
             }
         }
-        System.out.println("-Exiting loop after "+iterationNum+" iteration(s)...-");
+        System.out.println("-Exiting loop after " + iterationNum + " iteration(s)...-");
 
 
 /*

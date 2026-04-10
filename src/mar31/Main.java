@@ -26,7 +26,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         /*HOMEWORK
          * list of products with name, price, sku
          * implement add, remove, delete, edit
@@ -42,9 +41,8 @@ public class Main {
             listProducts.add(new Product("product2", 99.9912));
             listProducts.add(new Product("product3", 0.9911223123));
             listProducts.add(new Product("product4", 0));
-//            listProducts.add(new Product("prod1", 10.99));
-//            listProducts.add(new Product("prod2", 187.99));
-//            listProducts.add(new Product("prod3", 0.99));
+
+            listProducts = new ArrayList<>();
 
             do {
                 System.out.println("-CHOOSE YOU OPERATION-");
@@ -56,7 +54,8 @@ public class Main {
                 userIn = s.nextInt();
                 switch (userIn) {
                     case 1: {
-                        Product[] arrProducts = listProducts.toArray(new Product[0]);
+                        Product[] arrProducts = listProducts.toArray(new Product[0]); //<new Product[0]> SIZE OF ARRAY
+
                         System.out.println("--------------");
                         System.out.println("-ALL PRODUCTS-");
                         if (listProducts.isEmpty()) {
@@ -65,6 +64,11 @@ public class Main {
                             for (Product p : arrProducts) {
                                 System.out.println(p);
                             }
+
+                            /*
+                            for (int i = 0; i < list. size()
+System. out. print In (list. get(i) ;
+                            * */
                     }
                     break;
 
