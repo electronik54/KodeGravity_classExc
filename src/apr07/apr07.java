@@ -3,50 +3,140 @@ package apr07;
 import java.util.*;
 
 /*
-* SET
-*       # data is always unique
-* - HASHSET
-*       # allows 1 <null> since data has to be unique, data is never ordered and it produces data in random order everytime its requested
-* - LINKEDHASHSET
-*       # data is linked, allows 1 <null> since data has to be unique, data is naturally ordered
-* - TREESET
-*       # null not allowed as null cannot be sorted, data is naturally ordered
-* ITERATOR (DO LIST ITERATOR)
-* */
+ * - SET: # data is always unique
+ *   - HASHSET: # allows 1 <null> since data has to be unique, data is never ordered and it produces data in random order everytime its requested
+ *   - LINKEDHASHSET: # data is linked, allows 1 <null> since data has to be unique, data is ordered as inserted
+ *   - TREESET: # null not allowed as null cannot be sorted, data is naturally ordered
+ * - ITERATOR (DO LIST ITERATOR)
+ * */
 
 public class apr07 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int userIn;
+        boolean continueLoop = false;
 
         System.out.println("--COLLECTION: SET--");
+        System.out.println();
 
-        Set<String> lstColors = new HashSet<>();
-        lstColors.add("gray");
-        lstColors.add("red");
-        lstColors.add("blue");
-        lstColors.add("green");
-        lstColors.add("yellow");
-        lstColors.add("black");
-
-        TreeSet tstColors = new TreeSet();
-        tstColors.addAll(lstColors);
-        System.out.println("SORTED LIST:"+tstColors);
+        List<String> lstColors = new ArrayList(Arrays.asList("gray", "red", "blue", "green", "yellow", "purple", "orange", "brown"));
+        List<Integer> lstInts = new ArrayList(Arrays.asList(9999, 1, -4, 543, 64542, 982));
+        System.out.println("DEFAULT LIST:" + lstColors);
+        Collections.sort(lstColors);
+        System.out.println("SORTED LIST:" + lstColors);
 
         System.out.println();
-        TreeSet<Integer> trsInts = new TreeSet(Arrays.asList(9999,1,-4,543,64542,982));
-        System.out.println("TreeSet<Integer> has:" + trsInts);
-        System.out.print("select the number you want to remove:");
-        userIn = sc.nextInt();
+        do {
+            System.out.println();
+            System.out.println("<lstInts> DEFAULT VALUES: " + lstInts);
 
-//        Iterator<Integer> itr = trsInts
+            System.out.println("TreeSet<Integer> MIN VALUE: " + Collections.min(lstInts));
+            System.out.println("TreeSet<Integer> MAX VALUE: " + Collections.max(lstInts));
+
+            System.out.print("select the number you want to remove: ");
+            int numberToRemove = sc.nextInt();
+            boolean found = false;
+
+            System.out.println("PRESS (1) TO TRY REMOVING WITH <Iterator>");
+            System.out.print("PRESS (2) TO TRY REMOVING WITH <for> : ");
+            int method = sc.nextInt();
+
+            switch (method) {
+                case 1:
+                    System.out.println("ATTEMPTING TO REMOVE WITH <Iterator>");
+                    Iterator itr = lstInts.iterator();
+                    int itrCount = 0;
+                    while (itr.hasNext()) {
+                        int next = (int) itr.next();
+                        if (next == numberToRemove) {
+                            found = true;
+                            System.out.println("ELEMENT FOUND. REMOVING...");
+                            lstInts.remove(itrCount);
+                            break;
+                        }
+                        itrCount++;
+                    }
+                    break;
+
+                case 2:
+                    for (Integer i : lstInts) {
+                        if (i == numberToRemove) {
+                            found = true;
+                            System.out.println("-ELEMENT FOUND. REMOVING...-");
+                            try {
+                                lstInts.remove(i);
+                                break;      //THIS AVOIDS EXCEPTION!!
+                            } catch (ConcurrentModificationException e) {
+                                System.out.println("CANNOT MODIFY THIS COLLECTION");
+                            }
+                            catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                    break;
+            }
+            if (!found) System.out.println("--ELEMENT NOT FOUND--");
+            System.out.println("TreeSet<Integer> now has:" + lstInts);
+            System.out.print("TRY AGAIN TO REMOVE THE NUMBER FROM THE LIST? (1)>YES (ELSE)>NO : ");
+            if(sc.nextInt() == 1) continueLoop = true;
+            System.out.println("--------------------------------------------------------------------");
+
+        }while(continueLoop);
 
 
-
-
-
-
+//        Set<String> lstColors = new HashSet<>(Arrays.asList("gray", "red", "blue", "green", "yellow", "purple", "orange", "brown"));
+//        TreeSet<Integer> trsInts = new TreeSet(Arrays.asList(9999, 1, -4, 543, 64542, 982)); // find min, max and remove the user provided element using both for & iterator separately
+//
+//        TreeSet tstColors = new TreeSet();
+//        tstColors.addAll(lstColors);
+//        System.out.println("SORTED LIST:" + tstColors);
+//        System.out.println();
+//
+//        System.out.println("TreeSet<Integer> has:" + trsInts);
+//        System.out.println("TreeSet<Integer> MIN VALUE: " + trsInts.first());
+//        System.out.println("TreeSet<Integer> MAX VALUE: " + trsInts.last());
+//        System.out.print("select the number you want to remove:");
+//        int numberToRemove = sc.nextInt();
+//        boolean found = false;
+//
+//        System.out.println("PRESS (1) TO TRY REMOVING WITH <Iterator>");
+//        System.out.print("PRESS (2) TO TRY REMOVING WITH <for> : ");
+//        int method = sc.nextInt();
+//
+//        switch (method) {
+//            case 1:
+//                System.out.println("ATTEMPTING TO REMOVE WITH <Iterator>");
+//                Iterator itr = trsInts.iterator();
+//                while (itr.hasNext()) {
+//                    int next = (int) itr.next();
+//                    if (next == numberToRemove) {
+//                        found = true;
+//                        System.out.println("ELEMENT FOUND. REMOVING...");
+//                        trsInts.remove(next);
+//                        break;
+//                    }
+//                }
+//                break;
+//
+//            case 2:
+//                for (Integer i : trsInts) {
+//                    if (i == numberToRemove) {
+//                        found = true;
+//                        System.out.println("ELEMENT FOUND. REMOVING...");
+//                        try {
+//                            trsInts.remove(i);
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                        break;
+//                    }
+//                }
+//                break;
+//        }
+//        if (!found) System.out.println("ELEMENT NOT FOUND");
+//        System.out.println("TreeSet<Integer> now has:" + trsInts);
 
 
         System.out.println();
@@ -77,7 +167,7 @@ public class apr07 {
 
             System.out.println("CHECK IF <setInt> & <setInt2> ARE EQUAL:" + setInt.equals(setInt2));
 
-            userIn =0;
+            userIn = 0;
         }
 
 
@@ -95,9 +185,6 @@ public class apr07 {
         while (userIn == 1) {
 
         }
-
-
-
 
 
     }
