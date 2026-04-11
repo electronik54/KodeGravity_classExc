@@ -69,8 +69,7 @@ public class apr07 {
                                 break;      //THIS AVOIDS EXCEPTION!!
                             } catch (ConcurrentModificationException e) {
                                 System.out.println("CANNOT MODIFY THIS COLLECTION");
-                            }
-                            catch (Exception e) {
+                            } catch (Exception e) {
                                 e.printStackTrace();
                             }
                         }
@@ -79,11 +78,14 @@ public class apr07 {
             }
             if (!found) System.out.println("--ELEMENT NOT FOUND--");
             System.out.println("TreeSet<Integer> now has:" + lstInts);
-            System.out.print("TRY AGAIN TO REMOVE THE NUMBER FROM THE LIST? (1)>YES (ELSE)>NO : ");
-            if(sc.nextInt() == 1) continueLoop = true;
+            continueLoop = false;
+            if (lstInts.size() > 0) {
+                System.out.print("TRY AGAIN TO REMOVE THE NUMBER FROM THE LIST? (1)>YES (ELSE)>NO : ");
+                if (sc.nextInt() == 1) continueLoop = true;
+            } else System.out.println("EXITING LOOP AS THE <lstInts> IS EMPTY");
             System.out.println("--------------------------------------------------------------------");
 
-        }while(continueLoop);
+        } while (continueLoop);
 
 
 //        Set<String> lstColors = new HashSet<>(Arrays.asList("gray", "red", "blue", "green", "yellow", "purple", "orange", "brown"));
