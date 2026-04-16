@@ -3,7 +3,7 @@ package mar31;
 import Utils.Err.Err;
 import Utils.Utils;
 
-public class Product {
+public class Product implements Comparable<Product> {
     private String productName;
     private double productPrice;
     private final String productSku;
@@ -52,4 +52,10 @@ public class Product {
     public String toString() {
         return "[" + productSku + "]:" + productName + "|$" + productPrice;
     }
+
+    @Override
+    public int compareTo(Product prodToCompare) {
+        return (int) (productPrice - prodToCompare.getProductPrice());
+    }
+
 }
