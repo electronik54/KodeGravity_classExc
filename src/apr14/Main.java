@@ -67,7 +67,6 @@ public class Main {
         }
         System.out.println();
 
-
         System.out.print("CONTINUE <Queue>? ('y')>YES (other key)>NO :");
         userInputChar = sc.nextLine().charAt(0);
         if (userInputChar == 'y' || userInputChar == 'Y') {
@@ -84,7 +83,6 @@ public class Main {
             System.out.println("<queue>:" + queue);
         }
         System.out.println();
-
 
         System.out.println("--<Comparable>--");
         System.out.print("CONTINUE <Comparable>? ('y')>YES (other key)>NO :");

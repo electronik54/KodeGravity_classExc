@@ -1,0 +1,5 @@
+- jenkin on local
+  - blue ocean
+  - pipeline
+- maven (v3)
+  - 

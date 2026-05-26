@@ -15,7 +15,7 @@ It's the <ins>memory management process</ins> of reclaiming the runtime unused m
    ```
    Student studentOne = new Student("Smriti");
    Student studentTwo = new Student("Rob");
-   studentOne = studentTwo; // now the first object referred by studentOne is available for garbage collection
+   studentOne = studentTwo; 
    ```
 
 - By using an anonymous object
@@ -23,6 +23,7 @@ It's the <ins>memory management process</ins> of reclaiming the runtime unused m
    new Student();
    ```
 
+- When the object is out of scope 
 
 - ## 3. 3-Phases of Garbage Collection in Java
 	- EXAMPLE
@@ -35,7 +36,7 @@ It's the <ins>memory management process</ins> of reclaiming the runtime unused m
 
 	- Sweep dead objects
 		- releases the memory fragments which contain these dead objects.
-	  > [mem loc 1 (visited)]--[mem loc 2 (~~EMPTY~~)]--[mem loc 3 (visited)]--[mem loc 4 (visited)]--[mem loc 5 (~~EMPTY~~)]
+	  > [mem loc 1 (visited)]--[mem loc 2 <sub>(empty)</sub>]--[mem loc 3 (visited)]--[mem loc 4 (visited)]--[mem loc 5 <sub>(empty)</sub>]
 
 	- Compact remaining objects in memory
 		- Memory is compacted after the garbage collector deletes the dead objects
@@ -43,7 +44,7 @@ It's the <ins>memory management process</ins> of reclaiming the runtime unused m
 
 - ## 4. Generational Garbage Collection
 	-  Java categorizes objects into generations and performs garbage collection accordingly as per oracle.com, most objects have a very short life.
-	- heap memory area in the JVM is divided into three sections
+	- heap memory area in the JVM is divided into <ins>three sections</ins>
   ```
   |--------------------HEAP AREA----------------------------| |----NON_HEAP AREA-----|
   |------------YOUNG GENERATION----------| |-OLD GENERATION-| |-PERMANENT GENERATION-|
@@ -63,7 +64,7 @@ It's the <ins>memory management process</ins> of reclaiming the runtime unused m
 			1. `EDEN` has all objects: This space will contain all the live and dead objects initially
 			2. Minor GC occurs: All alive object are **moved** to `S1` Space and dead objects are removed. Hence `S2` and `EDEN` are empty
 			3. New objects are created to `EDEN`. But some of the objects in `S1` and `EDEN` are dead
-			4. Minor GC occurs: All dead are removed from `EDEN` and `S1` and alive once are moved to `S2`
+			4. Minor GC occurs: All dead are removed from `EDEN` and `S1` and alive objects are moved to `S2`
 			5. Next time when the Minor GC occurs everything live from `EDEN` and `S2` are moved to `S1`
 			6. Objects are moved to the `OLD GENERATION` after certain number of garbage collection cycles of moving around the survivor spaces
 		  >  <ins>KEY TAKEAWAYS:</ins>
@@ -83,8 +84,10 @@ It's the <ins>memory management process</ins> of reclaiming the runtime unused m
 >- You can use the `-Xms` and `-Xmx` flags to set the size of the initial and maximum size of the Heap memory.
 
 - ## 7. PERMANENT GENERATION
-	- Stores classes and methods, populated by the JVM at runtime based on classes in use
+    - <ins>Stores classes and methods</ins>, populated by the JVM at runtime based on classes in use
 	- PermGen had an upper limit to how much memory it would use to store objects which caused the `out-of-memory` exceptions. This was resolved with Java 8 where PermGen was replaced with MetaSpace which had the ability to resize the heap space as required
+	- Replaced by METASPACE in Java 8
+  	- No longer uses Java Heap and size is not configurable but automatically maintained by Java to reduce `OutOfMemoryError`
 >  <ins>NOTE:</ins>
 >- You can use the `-XX:PermGen` and `-XX:MaxPermGen` flags to set the initial and maximum size of the Permanent Generation.
 
@@ -108,13 +111,14 @@ It's the <ins>memory management process</ins> of reclaiming the runtime unused m
 		- it uses <ins>multiple threads</ins> for **BOTH** Young Generation and Old Generation.
 
 	- ### **CMS (Concurrent Mark Sweep) GC (concurrent low pause collector)** : JVM argument `-XX:+UseConcMarkSweepGC`
-		- it uses multiple threads for **BOTH** Young Generation and Old Generation.
+		- deprecated in Java 9 and completely removed in Java 14.
+        - it uses multiple threads for **BOTH** Young Generation and Old Generation.
 		- runs <ins>concurrently alongside application</ins> processes
 		- _PROS_
 			- <ins>minimize</ins> “stop the world” events.
 		- _CONS_
 			- uses <ins>more CPU</ins> than other GCs. More CPU allocation leads to better garbage collection
-			- No compaction is performed in CMS GC.
+			- <ins>No compaction</ins> is performed in CMS GC.
 
 	- ### **G1 (Garbage First) GC** : JVM argument `-XX:+UseG1GC`
 		- was intended as a replacement for CMS and was designed for multi-threaded applications that have a <ins>large heap size greater than 4GB</ins>

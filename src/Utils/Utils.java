@@ -31,4 +31,5 @@ public final class Utils {
     public static int getRandomInt(int minLimit, int maxLimit){
         return new Random().nextInt(minLimit, maxLimit);
     }
+
 }

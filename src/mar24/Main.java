@@ -142,14 +142,7 @@ public class Main {
         userIn = sc.nextInt();
         while (userIn == 1) {
 
-            System.out.println("-'PROTECTED' IS A ACCESS MODIFIER, USED WITH VARIABLES, METHOD, CONSTRUCTORS-");
-            System.out.println("-PROTECTED KEYWORD ALLOWS ACCESS TO MEMBER WITHIN THE SAME PACKAGE OR SUB-PACKAGE-");
-            System.out.println("-IMPORTANT:: IF INHERITED, ALL THE MEMBERS WILL BE ACCESSIBLE IRRESPECTIVE OF PACKAGE OR SUB-PACKAGES-");
-            System.out.println("-IN THE EXAMPLE, THE PACKAGE <mar24.Payments> LETS THE USER LOGIN WITH EMAIL.-");
-            System.out.println("    -THE <Bank.Email> LETS USER TO LOGIN WITH JUST EMAIL AS BANK IS A SECURED ENVIRONMENT.-");
-            System.out.println("    -ON THE OTHER HAND <ThirdParty> LETS USER TO LOGIN WITH EMAIL AND PASSWORD AS THIRD PARTY IS A NON-SECURED ENVIRONMENT.-");
-            System.out.println("    -BOTH PACKAGES REFERS TO CLASS CALLED <Bank.Auth> UNDER <Bank.Email> PACKAGE. HOWEVER THE <Bank.Email> HAS ACCESS TO PROTECTED METHOD IN <Bank.Auth> CALLED <autoAuth> AS <Bank.Email> AND <Bank.Auth> ARE IN THE SAME PACKAGE-");
-            System.out.println("    -ON THE OTHER HAND <ThirdParty.Email> DOES NOT HAVE ACCESS TO THIS PROTECTED METHOD IN <Bank.Auth> AS <ThirdParty.Email> AND <Bank.Auth> ARE IN THE DIFFERENT PACKAGES-");
+
 
             System.out.println("-LOGIN SYSTEM-");
             System.out.println("-CHOOSE HOW YOU WANT TO LOGIN-");

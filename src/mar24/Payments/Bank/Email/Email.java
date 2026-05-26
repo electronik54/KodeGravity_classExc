@@ -1,6 +1,6 @@
 package mar24.Payments.Bank.Email;
 
-public class Email {
+public class Email /**/extends Auth{
     private String email;
     private String password;
 
@@ -13,7 +13,6 @@ public class Email {
         System.out.println("-LOGGING IN WITH JUST USER NAME-");
         Auth authenticator = new Auth();
         if(authenticator.autoAuth(email)) return true;
-
         return false;
     }
 
@@ -22,8 +21,12 @@ public class Email {
         System.out.println("-LOGGING IN WITH USER NAME & PASSWORD-");
         this.password = userPassword;
 
-        Auth authenticator = new Auth();
-        if(authenticator.auth(email, password)) return true;
+        if(autoAuth(email)) return true;
+        if(fullAuth(email, password)) return true;
+
+        /*Auth au = new Auth();
+        if(au.autoAuth(email)) return true;
+        if(au.fullAuth(email, password)) return true;*/
 
         return false;
     }
