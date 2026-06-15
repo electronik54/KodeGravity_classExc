@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="orderPricingKBase" packages="rules.pricing" default="true">
+        <ksession name="orderPricingSession" type="stateless" default="true"/>
+    </kbase>
+</kmodule>

@@ -1,0 +1,34 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: inclass_exe
+  datasource:
+    url: jdbc:h2:./h2Test
+    username: nik
+    password: 123nik
+  h2:
+    console:
+      enabled: true
+      path: /h2console
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+github:
+  url: https://api.github.com
+  userspath: /users/
+
+#  datasource:
+#    primary: @Resource(name = "primaryDataSource")
+#      url: jdbc:mysql://localhost:3306/mainDb
+#      username: main_user
+#      password: main_pass
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#    external: @Resource(name = "externalDataSource")
+#      url: jdbc:mysql://external-host:3306/externalDb
+#      username: ext_user
+#      password: ext_pass
+#      driver-class-name: com.mysql.cj.jdbc.Driver

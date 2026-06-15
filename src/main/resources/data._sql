@@ -1,0 +1,57 @@
+-- INSERT INTO BOOK (BOOK_ID, NAME, STOCK, IS_AVAILABLE, ISBN, AUTHOR)
+-- VALUES (1, 'THE PERKS OF BEING A WALLFLOWER',30, TRUE, 'sdksdf343njkfdn343', 'Stephen chobsky'),
+--        (2, 'Afghanistan the bear trap', 20, TRUE, 'asdhj4b3jh4b34jh3', 'Mohammad Yousaf',),
+--        (3, 'Twisted games', 99, FALSE, 'cnkjsdn33j4k3', 'Ana Huang');
+
+
+INSERT INTO BOOK (
+    BOOK_ID,
+    NAME,
+    STOCK,
+    IS_AVAILABLE,
+    ISBN,
+    AUTHOR
+) VALUES (1, 'THE PERKS OF BEING A WALLFLOWER',30, 1, 'sdksdf343njkfdn343', 'Stephen chobsky'),
+       (2, 'Afghanistan the bear trap', 20, 1, 'asdhj4b3jh4b34jh3', 'Mohammad Yousaf'),
+       (3, 'Twisted games', 99, 0, 'cnkjsdn33j4k3', 'Ana Huang');
+
+-- INSERT INTO BOOK (
+--     BOOK_ID,
+--     NAME,
+--     STOCK,
+--     IS_AVAILABLE,
+--     ISBN,
+--     AUTHOR
+-- ) VALUES (
+--              1,
+--              'The Art of Coding',
+--              10,
+--              1,
+--              '978-1234567890',
+--              'Nikhil Meher'
+--          );
+
+
+
+
+BEGIN TRANSACTION;
+
+-- Temporarily disable referential checks (safe when truncating)
+SET REFERENTIAL_INTEGRITY FALSE;
+
+TRUNCATE TABLE book;
+
+SET REFERENTIAL_INTEGRITY TRUE;
+
+-- Insert 100 test rows with explicit ids 1..100
+INSERT INTO book (id, name, author, stock, isbn, is_available)
+SELECT
+  X AS id,
+  'Test Book ' || X AS name,
+  'Author ' || (MOD(X, 10) + 1) AS author,
+  10 + MOD(X, 20) AS stock,
+  RIGHT('0000000000000' || CAST(1000000000000 + X AS VARCHAR), 13) AS isbn,
+  CASE WHEN MOD(X, 2) = 0 THEN TRUE ELSE FALSE END AS is_available
+FROM SYSTEM_RANGE(1, 100);
+
+COMMIT;

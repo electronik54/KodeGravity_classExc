@@ -1,0 +1,38 @@
+package rules.pricing
+
+import com.kodegravity.inclass_exr.rules.model.CustomerTier
+import com.kodegravity.inclass_exr.rules.model.OrderPricingRequest
+
+rule "gold tier discount"
+salience 20
+when
+    $request : OrderPricingRequest(customerTier == CustomerTier.GOLD, totalAmount >= 100.0)
+then
+    $request.setDiscountPercentage(15);
+    $request.getAppliedRules().add("gold-tier-discount");
+end
+
+rule "loyalty discount"
+salience 10
+when
+    $request : OrderPricingRequest(customerTier != CustomerTier.GOLD, loyaltyYears >= 5, totalAmount >= 75.0)
+then
+    $request.setDiscountPercentage(10);
+    $request.getAppliedRules().add("loyalty-discount");
+end
+
+rule "free shipping"
+when
+    $request : OrderPricingRequest(totalAmount >= 50.0)
+then
+    $request.setShippingFee(0.0);
+    $request.getAppliedRules().add("free-shipping");
+end
+
+rule "standard shipping"
+when
+    $request : OrderPricingRequest(totalAmount < 50.0)
+then
+    $request.setShippingFee(9.99);
+    $request.getAppliedRules().add("standard-shipping");
+end
