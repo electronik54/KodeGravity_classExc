@@ -56,7 +56,7 @@ public class GitServiceImpl implements IGitService {
                     .retrieve()
                     .bodyToMono(GitUser.class)
                     .timeout(Duration.ofSeconds(1000))
-//                    .onErrorReturn(new GitUser())
+////                    .onErrorReturn(new GitUser())
                     .block();
 
             //<check if the <fetchedUser> exists here>

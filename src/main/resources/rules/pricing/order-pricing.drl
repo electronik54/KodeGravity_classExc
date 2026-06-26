@@ -6,7 +6,7 @@ import com.kodegravity.inclass_exr.rules.model.OrderPricingRequest
 rule "gold tier discount"
 salience 20
 when
-    $request : OrderPricingRequest(customerTier == CustomerTier.GOLD, totalAmount >= 100.0)
+    $request : OrderPricingRequest(customerTier == CustomerTier.GOLD, totalAmount >= 200.0)
 then
     $request.setDiscountPercentage(15);
     $request.getAppliedRules().add("gold-tier-discount");

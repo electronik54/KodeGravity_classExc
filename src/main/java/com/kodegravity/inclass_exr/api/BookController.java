@@ -35,8 +35,20 @@ public class BookController {
 
     @PostMapping(value="/addNew", produces = MediaType.APPLICATION_JSON_VALUE)
     public Book addNewBook(@RequestBody Book bk) {
+         bookService.addNewBook(bk);
+         bookService.addNewBook(bk);
+         bookService.addNewBook(bk);
+         bookService.addNewBook(bk);
+         bookService.addNewBook(bk);
+         bookService.addNewBook(bk);
+         bookService.addNewBook(bk);
+         bookService.addNewBook(bk);
         return bookService.addNewBook(bk);
     }
+
+
+
+
     @PostMapping(value="/addList", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Book> addNewBook(@RequestBody List<Book> bk) {
         return bookService.addNewBook(bk);

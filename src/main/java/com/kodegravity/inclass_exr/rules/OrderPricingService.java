@@ -1,5 +1,6 @@
 package com.kodegravity.inclass_exr.rules;
 
+import com.kodegravity.inclass_exr.rules.model.CustomerTier;
 import com.kodegravity.inclass_exr.rules.model.OrderPricingRequest;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.StatelessKieSession;
@@ -17,12 +18,17 @@ public class OrderPricingService {
     }
 
     public OrderPricingRequest evaluate(OrderPricingRequest request) {
+        request.setCustomerTier(CustomerTier.GOLD);
+        request.setTotalAmount(100);
         request.setDiscountPercentage(0);
         request.setShippingFee(0.0);
         request.getAppliedRules().clear();
 
         StatelessKieSession kieSession = kieContainer.newStatelessKieSession(ORDER_PRICING_SESSION);
         kieSession.execute(request);
+//            request.setShippingFee(0.0);
         return request;
     }
+
+
 }
