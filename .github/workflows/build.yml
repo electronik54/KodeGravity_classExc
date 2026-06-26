@@ -1,12 +1,12 @@
-name: --build workflow--
+name: --build workflow for dev--
 
 on:
   push:
     branches:
-      - master
+      - dev
   pull_request:
     branches:
-      - master
+      - dev
 
 jobs:
   build:
